@@ -2,6 +2,7 @@
 let userInput = document.getElementById("date");
 userInput.max = new Date().toISOString().split("T")[0];
 let result = document.getElementById("result");
+let button = document.getElementById("btn"); 
 
 function calculateAge(){
     let birthDate = new Date(userInput.value);
@@ -38,8 +39,13 @@ function calculateAge(){
         y3--;
     }
     result.innerHTML = `You are <span>${y3}</span> years, <span>${m3}</span> months and <span>${d3}</span> days old`
+    // result.style.display = "none";
     // console.log(y3, m3, d3);
+
 }
+button.addEventListener("click", () =>{
+    result.style.display = "block";
+});
 
 function getDaysInMonth(year, month){
     return new Date(year, month , 0).getDate();
