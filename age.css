@@ -72,6 +72,7 @@
 #result{
     font-size: 18px;
     margin-left: 40px;
+    display: none;
 }
 #result span{
     color: #f62377;
